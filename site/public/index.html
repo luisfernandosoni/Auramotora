@@ -1,0 +1,394 @@
+<!doctype html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Auramotora | Dystopian Transdisciplinary Portal</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Roboto+Mono:wght@100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#7D00FF", // Ultraviolet
+              acid: "#C1FF00", // Acid Green
+              void: "#0A0A0A", // Void Black
+              blood: "#FF4D00", // Blood Orange
+            },
+            fontFamily: {
+              display: ["Space Grotesk", "sans-serif"],
+              mono: ["Roboto Mono", "monospace"],
+            },
+            borderRadius: {
+              none: "0",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background-color: #0a0a0a;
+        cursor: crosshair;
+      }
+      #fluid-canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        pointer-events: none;
+        opacity: 0.6;
+      }
+      .glass-2 {
+        background: rgba(30, 30, 38, 0.4);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      @keyframes pulse-glow {
+        0%,
+        100% {
+          filter: drop-shadow(0 0 10px rgba(125, 0, 255, 0.4));
+        }
+        50% {
+          filter: drop-shadow(0 0 30px rgba(125, 0, 255, 0.8));
+        }
+      }
+      .animate-uv-pulse {
+        animation: pulse-glow 4s infinite ease-in-out;
+      }
+
+      /* Noise Overlay */
+      .noise::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("https://grainy-gradients.vercel.app/noise.svg");
+        opacity: 0.05;
+        pointer-events: none;
+        z-index: 100;
+      }
+
+      .vertical-text {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-void text-white font-display overflow-x-hidden selection:bg-acid selection:text-void noise"
+  >
+    <!-- Fluid Simulation Canvas -->
+    <canvas id="fluid-canvas"></canvas>
+
+    <div class="relative z-10 flex flex-col min-h-screen">
+      <!-- Header Navigation -->
+      <header
+        class="fixed top-0 w-full p-8 md:p-12 flex justify-between items-center z-50 pointer-events-none"
+      >
+        <div class="flex items-center gap-4 group pointer-events-auto">
+          <img
+            src="assets/logo.png"
+            alt="Auramotora Logo"
+            class="h-10 w-auto invert brightness-200 group-hover:scale-110 transition-transform"
+          />
+          <span
+            class="font-mono text-[10px] tracking-[0.5em] uppercase text-white/40 group-hover:text-acid transition-colors"
+            >TRVP.SYS</span
+          >
+        </div>
+        <nav class="hidden md:flex gap-12 pointer-events-auto">
+          <a
+            href="#bio"
+            class="font-mono text-[10px] tracking-[0.3em] uppercase hover:text-acid transition-colors text-glow-acid"
+            >[ ARCHIVE ]</a
+          >
+          <a
+            href="#music"
+            class="font-mono text-[10px] tracking-[0.3em] uppercase hover:text-acid transition-colors text-glow-acid"
+            >[ TRANSMISSION ]</a
+          >
+          <a
+            href="#contact"
+            class="font-mono text-[10px] tracking-[0.3em] uppercase hover:text-acid transition-colors text-glow-acid"
+            >[ INTERFACE ]</a
+          >
+        </nav>
+      </header>
+
+      <!-- Main Hero -->
+      <main
+        class="flex-1 flex flex-col items-center justify-center relative px-6 text-center"
+      >
+        <div class="max-w-6xl space-y-8">
+          <div class="space-y-2">
+            <p
+              class="font-mono text-xs tracking-[0.8em] text-acid animate-pulse"
+            >
+              SYSTEM_STATUS: AWAKE
+            </p>
+            <h1
+              id="hero-title"
+              class="text-7xl md:text-[12rem] font-bold tracking-tighter leading-none uppercase mix-blend-difference animate-uv-pulse transition-transform duration-100 ease-out"
+            >
+              AURAMOTORA
+            </h1>
+          </div>
+
+          <p
+            class="text-lg md:text-2xl font-light tracking-[0.2em] text-white/60 max-w-3xl mx-auto italic"
+          >
+            "Música distópica para la travesía"
+          </p>
+
+          <div class="pt-12">
+            <button
+              class="relative h-16 px-12 group overflow-hidden border border-white/20 hover:border-acid transition-all duration-300"
+            >
+              <span
+                class="relative z-10 font-mono text-sm tracking-[0.4em] uppercase group-hover:text-void"
+                >Iniciar Travesía</span
+              >
+              <div
+                class="absolute inset-0 bg-acid translate-y-full group-hover:translate-y-0 transition-transform duration-500"
+              ></div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Floating Manifesto Metadata -->
+        <div class="absolute bottom-20 left-12 text-left hidden lg:block">
+          <div class="glass-2 p-6 max-w-sm space-y-4 border-l-2 border-primary">
+            <p
+              class="font-mono text-[10px] text-white/40 uppercase tracking-widest"
+            >
+              // CORE_PHILOSOPHY
+            </p>
+            <p class="text-xs leading-relaxed text-white/80">
+              Auramotora es un Power Trio que hace música distópica para la
+              travesía. Bajo la premisa de crear, compartir y creer, contamos la
+              historia de los que fueron, los que son y los que serán.
+            </p>
+          </div>
+        </div>
+
+        <div class="absolute bottom-20 right-12 text-right hidden lg:block">
+          <div class="space-y-1">
+            <p
+              class="font-mono text-[10px] text-primary uppercase tracking-widest"
+            >
+              COORD_X: 19.512
+            </p>
+            <p
+              class="font-mono text-[10px] text-primary uppercase tracking-widest"
+            >
+              COORD_Y: -96.915
+            </p>
+            <p
+              class="font-mono text-[10px] text-white/20 uppercase tracking-widest"
+            >
+              XALAPA_VER_MX
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <!-- Bio Scroll Section (Shattered Layout) -->
+      <section
+        id="bio"
+        class="relative py-40 px-6 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 border-t border-white/5"
+      >
+        <div class="md:col-span-12 mb-20 text-center md:text-left">
+          <h2 class="text-5xl md:text-7xl font-bold tracking-tighter uppercase">
+            La Ficción Compatible
+          </h2>
+          <p
+            class="font-mono text-xs text-acid tracking-[0.4em] mt-4 uppercase"
+          >
+            // ORIGINS_AND_TRAJECTORY
+          </p>
+        </div>
+
+        <div class="md:col-span-12 lg:col-span-5 space-y-8 order-2 lg:order-1">
+          <div class="glass-2 p-10 space-y-8 border border-acid/10">
+            <p class="text-xl leading-relaxed text-white/90 font-light">
+              Formada en 2016 en Xalapa, hoy es conformada por
+              <span class="text-acid font-bold">Rubén Vargas</span> (guitarra y
+              voz),
+              <span class="text-acid font-bold">Luis Fernando Soní</span> (Bajo)
+              y <span class="text-acid font-bold">Omar Rincón</span> (Batería).
+            </p>
+            <div class="space-y-4 opacity-70">
+              <p class="text-sm leading-relaxed">
+                Con influencias del rock alternativo, progresivo, nu metal, post
+                rock, trip hop, future garage y shoegaze...
+              </p>
+              <p class="text-sm leading-relaxed">
+                Acompañados por secuencias y visuales, trabajamos para construir
+                lo que buscamos convertir en una experiencia transdisciplinaria
+                hacia el futuro.
+              </p>
+            </div>
+          </div>
+          <!-- Poster Image -->
+          <div class="relative group overflow-hidden border border-white/10">
+            <img
+              src="assets/poster.jpg"
+              alt="Auramotora Poster"
+              class="w-full h-auto grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
+            />
+            <div
+              class="absolute inset-0 bg-primary/20 mix-blend-overlay opacity-50"
+            ></div>
+          </div>
+        </div>
+
+        <div
+          class="md:col-span-12 lg:col-span-7 flex flex-col justify-center order-1 lg:order-2"
+        >
+          <div class="relative group">
+            <div
+              class="absolute -inset-10 bg-primary/20 blur-[100px] opacity-0 group-hover:opacity-40 transition-opacity duration-1000"
+            ></div>
+            <img
+              src="assets/band.jpg"
+              alt="Auramotora Band"
+              class="relative w-full h-auto z-10 brightness-75 group-hover:brightness-100 transition-all duration-1000 border border-white/5 shadow-2xl"
+            />
+            <!-- HUD Decor -->
+            <div
+              class="absolute bottom-4 right-4 z-20 flex flex-col items-end gap-1"
+            >
+              <span
+                class="font-mono text-[10px] bg-void/80 px-4 py-2 border border-white/10 backdrop-blur-md"
+                >POWER_TRIO.IMG_DATA_001</span
+              >
+              <span class="font-mono text-[10px] text-acid"
+                >DEPTH_SCAN: ACTIVE</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="md:col-span-12 mt-20 text-center">
+          <blockquote
+            class="text-2xl md:text-4xl font-light italic text-white/40 max-w-4xl mx-auto leading-relaxed"
+          >
+            "Conjugamos lo espiritual con lo mágico y lo originario con la
+            ciencia ficción."
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer
+        class="p-16 border-t border-white/5 flex flex-col items-center gap-12 bg-void"
+      >
+        <div class="flex gap-16">
+          <a
+            href="#"
+            class="material-symbols-outlined text-white/20 hover:text-acid cursor-pointer transition-all hover:scale-125"
+            >fingerprint</a
+          >
+          <a
+            href="#"
+            class="material-symbols-outlined text-white/20 hover:text-acid cursor-pointer transition-all hover:scale-125"
+            >graphic_eq</a
+          >
+          <a
+            href="#"
+            class="material-symbols-outlined text-white/20 hover:text-acid cursor-pointer transition-all hover:scale-125"
+            >share</a
+          >
+        </div>
+        <div class="text-center space-y-4">
+          <img
+            src="assets/logo.png"
+            alt="Logo Small"
+            class="h-6 w-auto mx-auto opacity-20 grayscale invert"
+          />
+          <p
+            class="font-mono text-[9px] text-white/20 tracking-[0.5em] uppercase"
+          >
+            © 2026 Auramotora / Experimental EPK Interface / [V1.0_BETA]
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      // Hero Interaction: Parallax/Displacement
+      const title = document.getElementById("hero-title");
+      window.addEventListener("mousemove", (e) => {
+        const x = (e.clientX / window.innerWidth - 0.5) * 30;
+        const y = (e.clientY / window.innerHeight - 0.5) * 30;
+        title.style.transform = `translate(${x}px, ${y}px)`;
+      });
+
+      // Fluid Background simulation placeholder
+      const canvas = document.getElementById("fluid-canvas");
+      const ctx = canvas.getContext("2d");
+      let width, height;
+
+      function resize() {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+      }
+
+      window.addEventListener("resize", resize);
+      resize();
+
+      // Very simple particle-mist effect to simulate "fluid" until full WebGL implementation
+      const particles = Array.from({ length: 40 }, () => ({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        size: Math.random() * 200 + 100,
+        vx: (Math.random() - 0.5) * 0.5,
+        vy: (Math.random() - 0.5) * 0.5,
+        alpha: Math.random() * 0.1,
+      }));
+
+      function animate() {
+        ctx.clearRect(0, 0, width, height);
+        ctx.filter = "blur(80px)";
+
+        particles.forEach((p) => {
+          p.x += p.vx;
+          p.y += p.vy;
+
+          if (p.x < -p.size) p.x = width + p.size;
+          if (p.x > width + p.size) p.x = -p.size;
+          if (p.y < -p.size) p.y = height + p.size;
+          if (p.y > height + p.size) p.y = -p.size;
+
+          const grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.size);
+          grad.addColorStop(0, `rgba(125, 0, 255, ${p.alpha})`);
+          grad.addColorStop(1, "transparent");
+
+          ctx.fillStyle = grad;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+          ctx.fill();
+        });
+
+        requestAnimationFrame(animate);
+      }
+      animate();
+    </script>
+  </body>
+</html>
