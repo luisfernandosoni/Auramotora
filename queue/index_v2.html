@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Auramotora - Living Poster</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ff4d00",
+                        "background-light": "#f8f6f5",
+                        "background-dark": "#0A0A0A",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    backgroundImage: {
+                        'halftone': 'radial-gradient(circle, #ff4d00 1px, transparent 1.5px)',
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'jitter': 'jitter 0.2s steps(2) infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        jitter: {
+                            '0%': { transform: 'translate(0,0)' },
+                            '25%': { transform: 'translate(1px, 1px)' },
+                            '50%': { transform: 'translate(-1px, -1px)' },
+                            '75%': { transform: 'translate(-1px, 1px)' },
+                            '100%': { transform: 'translate(1px, -1px)' },
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+<style>/* Custom Noise Overlay */
+.noise-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 50;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCbKeHYhZ3CMvq20dfB1ULFHhe06DFi13mR8cyfAElJsPCQArQkXAzL8a_NcJU6zNO2T_p8xODeEFJvMCrLFu67HOI_QxBLORalHhffpPUJUyCgWB2312w4JQhQBCbYG-OUvWJZpr8fSKWiIw_pp3kYPaL9w6NitcbgspqhCij2xRMiWrynYqXcqaogj3KHVBSRVbHdEhWmcEkZ_TNEWxMmQy_x9n0ZawNH-33JvifGWXIMWb_SLLmZu1wy3uXpGhGMjTtFkDy0My4)
+    }
+/* Halftone Pattern Class */
+.bg-halftone-pattern {
+    background-image: radial-gradient(rgba(255, 77, 0, 0.3) 1px, transparent 1px);
+    background-size: 8px 8px
+    }
+.text-stroke-primary {
+    -webkit-text-stroke: 1px #ff4d00;
+    color: transparent
+    }
+.torn-edge {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 98%, 95% 95%, 90% 98%, 85% 95%, 80% 98%, 75% 95%, 70% 98%, 65% 95%, 60% 98%, 55% 95%, 50% 98%, 45% 95%, 40% 98%, 35% 95%, 30% 98%, 25% 95%, 20% 98%, 15% 95%, 10% 98%, 5% 95%, 0% 98%)
+    }</style>
+</head>
+<body class="bg-background-dark overflow-x-hidden antialiased text-white font-display selection:bg-primary selection:text-white">
+<!-- Noise Overlay -->
+<div class="noise-overlay"></div>
+<!-- Liquid Mist Background Layers -->
+<div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+<div class="absolute top-[-10%] left-[-10%] w-[60vw] h-[60vw] bg-purple-900/20 rounded-full blur-[120px] mix-blend-screen animate-pulse-slow"></div>
+<div class="absolute bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] bg-primary/10 rounded-full blur-[100px] mix-blend-screen animate-pulse-slow" style="animation-delay: 2s;"></div>
+</div>
+<!-- Main Container -->
+<div class="relative min-h-screen w-full flex flex-col p-4 md:p-10 z-10">
+<!-- Top Left: Brand -->
+<header class="absolute top-6 left-6 md:top-10 md:left-10 z-40 group">
+<div class="flex items-center gap-3">
+<div class="size-8 md:size-10 text-primary group-hover:animate-spin">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_543)">
+<path d="M42.1739 20.1739L27.8261 5.82609C29.1366 7.13663 28.3989 10.1876 26.2002 13.7654C24.8538 15.9564 22.9595 18.3449 20.6522 20.6522C18.3449 22.9595 15.9564 24.8538 13.7654 26.2002C10.1876 28.3989 7.13663 29.1366 5.82609 27.8261L20.1739 42.1739C21.4845 43.4845 24.5355 42.7467 28.1133 40.548C30.3042 39.2016 32.6927 37.3073 35 35C37.3073 32.6927 39.2016 30.3042 40.548 28.1133C42.7467 24.5355 43.4845 21.4845 42.1739 20.1739Z" fill="currentColor"></path>
+<path clip-rule="evenodd" d="M7.24189 26.4066C7.31369 26.4411 7.64204 26.5637 8.52504 26.3738C9.59462 26.1438 11.0343 25.5311 12.7183 24.4963C14.7583 23.2426 17.0256 21.4503 19.238 19.238C21.4503 17.0256 23.2426 14.7583 24.4963 12.7183C25.5311 11.0343 26.1438 9.59463 26.3738 8.52504C26.5637 7.64204 26.4411 7.31369 26.4066 7.24189C26.345 7.21246 26.143 7.14535 25.6664 7.1918C24.9745 7.25925 23.9954 7.5498 22.7699 8.14278C20.3369 9.32007 17.3369 11.4915 14.4142 14.4142C11.4915 17.3369 9.32007 20.3369 8.14278 22.7699C7.5498 23.9954 7.25925 24.9745 7.1918 25.6664C7.14534 26.143 7.21246 26.345 7.24189 26.4066ZM29.9001 10.7285C29.4519 12.0322 28.7617 13.4172 27.9042 14.8126C26.465 17.1544 24.4686 19.6641 22.0664 22.0664C19.6641 24.4686 17.1544 26.465 14.8126 27.9042C13.4172 28.7617 12.0322 29.4519 10.7285 29.9001L21.5754 40.747C21.6001 40.7606 21.8995 40.931 22.8729 40.7217C23.9424 40.4916 25.3821 39.879 27.0661 38.8441C29.1062 37.5904 31.3734 35.7982 33.5858 33.5858C35.7982 31.3734 37.5904 29.1062 38.8441 27.0661C39.879 25.3821 40.4916 23.9425 40.7216 22.8729C40.931 21.8995 40.7606 21.6001 40.747 21.5754L29.9001 10.7285ZM29.2403 4.41187L43.5881 18.7597C44.9757 20.1473 44.9743 22.1235 44.6322 23.7139C44.2714 25.3919 43.4158 27.2666 42.252 29.1604C40.8128 31.5022 38.8165 34.012 36.4142 36.4142C34.012 38.8165 31.5022 40.8128 29.1604 42.252C27.2666 43.4158 25.3919 44.2714 23.7139 44.6322C22.1235 44.9743 20.1473 44.9757 18.7597 43.5881L4.41187 29.2403C3.29027 28.1187 3.08209 26.5973 3.21067 25.2783C3.34099 23.9415 3.8369 22.4852 4.54214 21.0277C5.96129 18.0948 8.43335 14.7382 11.5858 11.5858C14.7382 8.43335 18.0948 5.9613 21.0277 4.54214C22.4852 3.8369 23.9415 3.34099 25.2783 3.21067C26.5973 3.08209 28.1187 3.29028 29.2403 4.41187Z" fill="currentColor" fill-rule="evenodd"></path>
+</g>
+<defs>
+<clippath id="clip0_6_543"><rect fill="white" height="48" width="48"></rect></clippath>
+</defs>
+</svg>
+</div>
+<h2 class="text-white text-xl md:text-2xl font-black tracking-tighter uppercase leading-none mix-blend-difference">Auramotora</h2>
+</div>
+<div class="mt-2 text-[#cea08d] text-xs font-mono tracking-widest uppercase opacity-70">
+                Digital Decay Variant // EST. 2024
+            </div>
+</header>
+<!-- Top Right: Navigation -->
+<nav class="absolute top-6 right-6 md:top-10 md:right-10 z-40 flex flex-col items-end gap-2">
+<a class="group relative block" href="#">
+<span class="absolute -right-2 -top-2 block size-2 bg-primary opacity-0 transition-opacity group-hover:opacity-100 animate-pulse"></span>
+<span class="text-white text-lg md:text-xl font-bold uppercase tracking-widest hover:text-primary transition-colors hover:italic">Music</span>
+</a>
+<a class="group relative block" href="#">
+<span class="text-white text-lg md:text-xl font-bold uppercase tracking-widest hover:text-primary transition-colors hover:italic">Tour</span>
+</a>
+</nav>
+<!-- Main Content Area: Shattered Canvas -->
+<main class="relative flex-grow flex items-center justify-center w-full h-full min-h-[600px]">
+<!-- Central Distorted 'A' -->
+<div class="relative z-10 select-none pointer-events-none">
+<div class="absolute inset-0 bg-halftone-pattern rounded-full opacity-50 blur-3xl animate-pulse"></div>
+<h1 class="text-[12rem] md:text-[20rem] lg:text-[28rem] font-black leading-[0.8] text-transparent text-stroke-primary opacity-30 mix-blend-screen blur-[1px] animate-float">
+                    A
+                </h1>
+<!-- Overlay duplicate for glitch effect -->
+<h1 class="absolute top-0 left-1 text-[12rem] md:text-[20rem] lg:text-[28rem] font-black leading-[0.8] text-white/5 opacity-80 mix-blend-overlay animate-jitter">
+                    A
+                </h1>
+</div>
+<!-- Paper Clipping: Band Info -->
+<div class="absolute z-30 bottom-24 left-4 md:bottom-auto md:left-20 md:top-1/2 md:-translate-y-1/2 max-w-[320px] rotate-[-2deg] hover:rotate-0 transition-transform duration-500 ease-out">
+<div class="torn-edge bg-background-light p-6 shadow-[8px_8px_0px_#ff4d00]">
+<div class="flex flex-col gap-3">
+<div class="w-full h-32 mb-2 bg-neutral-800 overflow-hidden relative grayscale contrast-125">
+<img alt="Gritty black and white texture of concrete or static noise" class="w-full h-full object-cover opacity-80" data-alt="Abstract gritty band texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCy22aDJK0XKhP3fKUa6nxtSiZpHIDOOG2x7sx_3RukVGPh4D2c8evLHClqorc0y6U1z57NZVMIgnuwmPdpjroviiw0uEcM4IH2Vk5I9AMm4RGg-7u-qrbnty_8ci4Pw7vRdw30a4d2lToBB3GELVaT3BlmiHEQgpJrslYdXWzkFGaortvL3XrqpwBvqbnSslMyNXSGM_s0qlU7-jsItnToZAsjMtd6XK0XPp-H_-vlttlc--2eGruemL0VzTzTP_UfV-O0Ocda1cM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+</div>
+<h2 class="text-background-dark text-3xl font-black uppercase leading-none tracking-tighter">Power Trio</h2>
+<p class="text-background-dark/80 text-sm font-bold font-mono leading-tight">
+                            Auramotora es un Power Trio que desafía la realidad. Sonido visceral para mentes fracturadas.
+                        </p>
+<div class="h-0.5 w-full bg-background-dark/20 my-1"></div>
+<div class="flex justify-between items-center text-[10px] text-background-dark/60 font-mono uppercase">
+<span>Vol. 04</span>
+<span>Ref: A-MTR</span>
+</div>
+</div>
+</div>
+<!-- "Tape" CTA attached to the paper -->
+<a class="absolute -right-6 -bottom-4 bg-primary text-white font-bold text-sm px-6 py-2 rotate-[4deg] shadow-lg hover:bg-white hover:text-primary transition-colors flex items-center gap-2" href="#">
+                    LISTEN NOW
+                    <span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</a>
+</div>
+<!-- Asymmetrical Image / Visual Element -->
+<div class="hidden md:block absolute right-[10%] top-[20%] z-20 w-64 h-80 rotate-[3deg] opacity-80 mix-blend-difference hover:opacity-100 hover:mix-blend-normal transition-all duration-500">
+<div class="w-full h-full border-2 border-white/20 p-2 backdrop-blur-sm">
+<img alt="Blurred neon lights in dark motion" class="w-full h-full object-cover grayscale contrast-150 brightness-75 hover:grayscale-0 transition-all duration-700" data-alt="Abstract blurred neon lights representing digital decay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIHt5ZV-iTuoRZ0_t44317KHhtjIij1U-5RxlGIJWXVOoM8KE5_YTm86FWoogSsDgiVdfx9yzs20B4Roj75Z8P-xpH76falOn5S5ZQKcGx8amtD5jqaN3GciecrHZI-sn26Bpt5sHL7mt94cbWD6DYjclwQQc2EEZ2cpHQyazk-AUwlqZ85LzpkAQBhOYYHy1rYOjaPUnrhNFrphYzL9mgdc45FgbLi3E-3Vc0pW1lupWEsHdPAOtur1MykxXIe5I6mNIwRRh0zMI"/>
+</div>
+<div class="absolute -bottom-6 right-0 text-white/40 font-mono text-xs rotate-[-90deg] origin-top-right">
+                    IMG_SEQ_0092.RAW
+                </div>
+</div>
+</main>
+<!-- Bottom Left: Shop Navigation -->
+<div class="absolute bottom-6 left-6 md:bottom-10 md:left-10 z-40">
+<a class="text-white text-lg md:text-xl font-bold uppercase tracking-widest hover:text-primary transition-colors hover:italic flex items-center gap-2 group" href="#">
+<span class="material-symbols-outlined group-hover:animate-bounce">shopping_bag</span>
+                Shop
+            </a>
+</div>
+<!-- Footer / Socials (Scattered) -->
+<footer class="absolute bottom-6 right-6 md:bottom-10 md:right-10 z-40 flex flex-col items-end gap-4">
+<div class="flex gap-4">
+<a class="text-white/60 hover:text-primary transition-colors transform hover:-translate-y-1" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+<a class="text-white/60 hover:text-primary transition-colors transform hover:-translate-y-1" href="#">
+<span class="material-symbols-outlined">podcasts</span>
+</a>
+<a class="text-white/60 hover:text-primary transition-colors transform hover:-translate-y-1" href="#">
+<span class="material-symbols-outlined">emergency_recording</span>
+</a>
+</div>
+<p class="text-white/30 text-[10px] font-mono text-right max-w-[150px]">
+                © 2024 Auramotora.<br/>All Rights Reserved.
+            </p>
+</footer>
+</div>
+</body></html>

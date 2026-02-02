@@ -2,34 +2,40 @@
 page: index
 ---
 
-# Prompt: Auramotora EPK - The Infinite Portal (Hero Section)
+# Prompt: Auramotora EPK - The Living Poster Proposal
 
-Build a state-of-the-art, avant-garde landing page hero section for the band **Auramotora**. This is the entry point to a transdisciplinary interactive "Electronic Press Kit" experiment.
-
-**Core Concept:**
-The page should feel like a "living" dystopian tapestry. The background is a fluid, reactive black void. In the center, the Auramotora logo (Modernist, geometric) emerges from a digital haze. The experience must feel physics-defying and high-fidelity.
-
-**Key Content:**
-
-- **Primary Title:** Auramotora
-- **Tagline:** "Música distópica para la travesía"
-- **Mission Statement:** "Crear, compartir y creer. Una experiencia transdisciplinaria hacia el futuro."
-- **Call to Action:** "Iniciar Travesía" (Start Journey)
+Build a state-of-the-art, avant-garde website that functions as a **"Living Poster"** for the band **Auramotora**. The design must be a direct digital evolution of the provided poster art—moving away from "clean UI" into a tactile, zine-like experience of digital decay and Latin American Surrealism.
 
 **DESIGN SYSTEM (REQUIRED):**
 
-- **Aesthetic:** Dystopian Surrealism. A mix of Brutalist structure and fluid dreamlike patterns.
-- **Colors:** Void Black (#0A0A0A) dominant, with Ultraviolet (#7D00FF) and Acid Green (#C1FF00) reactive highlights.
-- **Typography:** Bold, angular "Space Grotesk" for headers. Technical "Roboto Mono" for supplementary text.
-- **Components:** Sharp edges (rounded-none). Glassmorphic 2.0 containers.
-- **Micro-interactions:** Elements should warp or glow (Acid Green) on hover. The background should react to cursor movement with fluid displacement effects.
+- **Platform:** Web, Desktop-first
+- **Theme:** "Latin Surrealist Poster" - Rough, Grainy, Visceral
+- **Palette:**
+  - **Void Black (#0A0A0A)** dominant background.
+  - **Ultraviolet (#7D00FF)** and **Acid Green (#C1FF00)** for high-contrast glitches.
+  - **Blood Orange (#FF4D00)** for visceral highlights (inspired by the poster's warm mist).
+- **Textures:** Heavy Halftone dots, cinematic film grain, and viscous "liquid mist" background.
+- **Typography:**
+  - **PRIMARY HERO:** **The Band Logo** (provided asset). It must be the massive central presence.
+  - **Headlines:** "Space Grotesk" with extreme letter-spacing and "VHS-warp" scanning distortions.
+- **Layout:** "Shattered Canvas"—abandon the clean grid. Elements should feel "rough-cut" and asymmetrical, like pieces of a physical collage pasted onto a black void.
 
 **Page Structure:**
 
-1. **Dynamic Background:** A full-bleed WebGL/WebGPU-style fluid simulation in deep black/purple.
-2. **Central Portal:** The band logo floating in a technical, glowing aura.
-3. **Typography Overlay:** The tagline "Música distópica para la travesía" rendered in high-contrast white with Acid Green micro-glows.
-4. **Nav Interface:** Minimalist corners with "History", "Music", "Future" links—each glowing on interaction.
-5. **Interactive CTA:** A "Start Journey" button that feels like activating a machine.
+1. **Hero: The Ritual Centerpiece:**
+   - A massive, centered version of the **Auramotora Logo** (provided PNG) as the primary presence.
+   - Background: A viscous, grainy mist in shades of deep red and ultraviolet that reacts to mouse movement.
+   - Tagline: "Música distópica para la travesía" rendered with a halftone-jitter effect.
+2. **Interface HUD:**
+   - Minimalist corner labels: "[ 01_ARCHIVE ]", "[ 02_TRANSMISSION ]", "[ 03_INTERFACE ]".
+   - HUD elements should "flicker" and show technical metadata (Depth scans, coordinates) in tiny Roboto Mono text.
+3. **The Narrative Fragment (Bio):**
+   - An asymmetrical content block featuring the band's history.
+   - Use "Rough-cut" masks for the band portrait (provided asset).
+   - Text should look like it was printed on a grainy, semi-translucent substrate.
 
-**Inspiration:** 2026 bleeding-edge reactive web experiments, Awwwards Site of the Year 2025/2026, avant-garde music platforms.
+**Specific Instructions:**
+
+- **NO GENERIC FONTS for the main title.** Use the Logo asset prominently.
+- **MAXIMUM GRIT.** Use CSS noise and radial-gradient halftone patterns.
+- **PUNK FLYER VIBE.** The site should feel like a rare bootleg discovery, not a corporate console.

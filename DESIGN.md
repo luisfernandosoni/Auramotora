@@ -2,9 +2,9 @@
 
 **Project ID:** [To be generated]
 
-## 1. Visual Theme & Atmosphere
+## 1. Visual Theme: A24 Cinematic Ritual
 
-The aesthetic is **"Dystopian Surrealism"**—a transdisciplinary fusion of raw brutalist honesty and fluid, dreamlike illogicality. It feels like a high-fidelity digital ritual. The atmosphere is dense yet breathable, transitioning between grainy desaturated voids and hyper-saturated neon bursts. It captures the band's philosophy: a serious exploration of dark corners taken with levedad (lightness).
+The aesthetic is **"Atmospheric Cinema"**—inspired by the high-end, moody visual language of A24 films. It moves away from "punk collage" into a sophisticated, clean, and hauntingly beautiful experience. Think: **Symmetrical compositions, elegant serifs, deep shadows, and high-fidelity cinematic film grain.** The goal is to make the website feel like a cinematic opening sequence for an avant-garde dystopian masterpiece.
 
 ## 2. Color Palette & Roles
 
@@ -17,16 +17,17 @@ The aesthetic is **"Dystopian Surrealism"**—a transdisciplinary fusion of raw 
 
 ## 3. Typography Rules
 
-- **Headlines:** **"Space Grotesk"** (Bold/Extra Bold). Angular, modernist, with slight letter-spacing tension. Occasional use of distorted/warped text for headers to imply "digital decay."
-- **Body:** **"Inter"** or **"Roboto Mono"** for a utilitarian, technical feel. High contrast between weights.
-- **Styling:** Heavy use of uppercase for navigation and labels to emphasize the "serious band" persona.
+- **Display (Atmospheric):** **"EB Garamond"** (Italic, Medium). Used for cinematic quotes and section titles. It should feel historical, elegant, and slightly haunting.
+- **Headlines (Structural):** **"Space Grotesk"** (Light/Medium). Tracked out (0.3em+) for a high-end, technical look.
+- **Body:** **"Inter"** or **"Space Grotesk"** (Regular). Minimalist, legible, and desaturated.
+- **Styling:** Minimalist labels. Avoid uppercase "shouting"; use lowercase or balanced tracking for a premium feel.
 
-## 4. Component Stylings
+## 4. Component Stylings: The Cinematic Ritual
 
-- **Navigation:** Minimalist, floating overlays. Links react with "liquid hover" effects (warping or glowing).
-- **Buttons:** Sharp, squared-off edges (rounded-none). Neon borders that pulses with Ultraviolet or Acid Green.
-- **Cards/Containers:** Glassmorphic 2.0. Functional layered translucency with a subtle grainy texture overlay.
-- **Media Items:** Photos and video frames have "glitch-flicker" borders and are often presented at impossible scales.
+- **Navigation:** Deeply minimalist. Centered or symmetrically balanced in the corners. Use very fine lines (0.5px) for borders.
+- **Hero Presence:** The **Band Logo** as a "Monolith." Centered, massive, but handled with extreme elegance—subtle breathing animations, atmospheric glow, and lens-blur depth.
+- **Media Items:** Cinematic crops. Use letterboxing or "wide-angle" aspect ratios. Colors should be graded: deep blacks, high contrast, and desaturated midtones.
+- **Atmosphere:** Universal high-fidelity film grain. Avoid "dirty" noise; use "cinematic" grain that feels like it's moving through a projector.
 
 ## 5. Layout Principles
 

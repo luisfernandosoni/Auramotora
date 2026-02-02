@@ -2,7 +2,7 @@
 
 ## 1. Vision
 
-A one-page interactive EPK that functions as a "digital tapesty" of the band's history, music, and philosophy. It is not a static website; it is an avant-garde experiment where the user "traverses" the band's dystopian universe.
+A one-page interactive EPK that functions as a **"Grainy Digital Ritual."** It is not a static website; it is an avant-garde experiment where the user traverses a world of digital decay, distorted textures, and rough-cut storytelling.
 
 ## 2. Sitemap
 
@@ -14,11 +14,11 @@ A one-page interactive EPK that functions as a "digital tapesty" of the band's h
 
 ## 3. Roadmap
 
-- [ ] **Task 1: The Portal (Hero)** - Implementation of the reactive fluid landing with the Core Logo and band taglines.
-- [ ] **Task 2: The Narrative (Bio)** - Integrating the Spanish history text into a fluid, anti-grid layout.
-- [ ] **Task 3: Discography (Z3RO)** - Cinematic showcase of the 2019 EP and the "Hombres Pájaro" legacy.
-- [ ] **Task 4: Global Networking** - Interactive map or list of cities and bands shared with.
-- [ ] **Task 5: Final Polish** - Integrating the 2026 WebGPU fluid background across all "sections."
+- [x] **Task 1: The Portal (Hero)** - Implementation of the reactive, grainy hero section.
+- [x] **Task 2: The Narrative (Bio)** - Integrating the Spanish history text into a rough, asymmetrical layout.
+- [ ] **Task 3: Discography (Z3RO)** - Grainy archive showcase of the 2019 EP.
+- [ ] **Task 4: Global Networking** - Interactive list of cities and shared stages.
+- [ ] **Task 5: Final Polish** - Universal Grain & Glitch layer integration.
 
 ## 4. Screen Reference
 
@@ -28,5 +28,4 @@ A one-page interactive EPK that functions as a "digital tapesty" of the band's h
 ## 5. Asset Paths
 
 - **Logo:** `assets/logo.png` (using uploaded_media_1)
-- **Poster:** `assets/poster.jpg` (using uploaded_media_0)
 - **Band Photo:** `assets/band.jpg` (using uploaded_media_2)
