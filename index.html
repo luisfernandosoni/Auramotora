@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Auramotora EPK | Transdisciplinary Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1111d4",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#050505",
+                        "accent-iridescent": "#9292c9",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            cursor: crosshair;
+        }
+        .glass-panel {
+            background: rgba(16, 16, 34, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(50, 50, 103, 0.5);
+        }
+        .pixel-sort-overlay {
+            background: linear-gradient(90deg, transparent 0%, rgba(17, 17, 212, 0.1) 50%, transparent 100%);
+            background-size: 200% 100%;
+        }
+        .iridescent-glow {
+            box-shadow: 0 0 20px rgba(146, 146, 201, 0.2), 0 0 40px rgba(17, 17, 212, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-white selection:bg-primary selection:text-white overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 left-0 w-full z-50 border-b border-white/10 bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-[1440px] mx-auto flex items-center justify-between px-8 py-4">
+<div class="flex items-center gap-3">
+<div class="size-6 text-primary">
+<span class="material-symbols-outlined text-3xl">deployed_code</span>
+</div>
+<h2 class="text-xl font-bold tracking-tighter uppercase">Auramotora <span class="text-primary text-xs ml-1 align-top">[V3.0]</span></h2>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-xs font-medium tracking-[0.2em] hover:text-primary transition-colors" href="#">001_CORE</a>
+<a class="text-xs font-medium tracking-[0.2em] hover:text-primary transition-colors" href="#">002_ARCHIVE</a>
+<a class="text-xs font-medium tracking-[0.2em] hover:text-primary transition-colors" href="#">003_DNA</a>
+<a class="text-xs font-medium tracking-[0.2em] hover:text-primary transition-colors" href="#">004_TRANSMISSION</a>
+</nav>
+<button class="bg-primary hover:bg-blue-700 text-white text-[10px] font-bold tracking-[0.2em] px-6 py-2 rounded-full transition-all uppercase">
+                Initialize_Contact
+            </button>
+</div>
+</header>
+<!-- Side Navigation HUD -->
+<aside class="fixed right-8 top-1/2 -translate-y-1/2 z-40 hidden lg:flex flex-col gap-8 items-center">
+<div class="h-32 w-px bg-white/20"></div>
+<div class="flex flex-col gap-6 text-[10px] font-bold tracking-widest vertical-text rotate-180" style="writing-mode: vertical-rl;">
+<span class="text-primary">X_COORD_112.4</span>
+<span class="text-white/40">Y_COORD_009.8</span>
+<span class="text-white/40">Z_DEPTH_88.1</span>
+</div>
+<div class="h-32 w-px bg-white/20"></div>
+</aside>
+<main class="relative pt-24 pb-20">
+<!-- Hero Section / 3D Scanned Busts Placeholder -->
+<section class="relative min-h-[80vh] flex flex-col items-center justify-center px-4 overflow-hidden">
+<div class="absolute inset-0 pointer-events-none flex items-center justify-center opacity-20">
+<div class="w-[800px] h-[800px] border border-primary/30 rounded-full animate-pulse"></div>
+</div>
+<div class="z-10 text-center space-y-4">
+<p class="text-primary font-mono text-sm tracking-[0.5em] mb-4">SYSTEM_STATUS: OPERATIONAL</p>
+<h1 class="text-white tracking-tighter text-6xl md:text-8xl font-bold uppercase leading-none">
+                    [3D_SCAN_INITIATED]
+                </h1>
+<div class="flex justify-center gap-2 mt-6">
+<span class="px-3 py-1 border border-white/20 rounded-full text-[10px] tracking-widest uppercase bg-white/5">Auramotora_Core</span>
+<span class="px-3 py-1 border border-white/20 rounded-full text-[10px] tracking-widest uppercase bg-white/5">Silicon_Valley_2026</span>
+</div>
+</div>
+<!-- Representation of 3D Bust Content -->
+<div class="mt-12 relative w-full max-w-4xl h-[500px] flex items-center justify-center">
+<div class="grid grid-cols-3 gap-8 w-full">
+<div class="aspect-[3/4] glass-panel rounded-xl overflow-hidden relative group">
+<img class="w-full h-full object-cover opacity-60 grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Abstract 3D white human bust scan with digital glitches" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvJ84bKx9ITZf1K1VMIRiwlcCvjEtRB5dMojHajyrzNK7WcKakvydOEbHUMcKK-Te-FVmifMcbs-0bpZZo3lPBAecVtR5enI4LgcD6XCQh5LLy2uPp1380t5Cy75vTCx5fL7IKriTZ6SmjDIN7YPIQDQorHn0Z9PkBT1WEnGGI2IpOFx5T9xJYpxEjYtKib8ooQeRrI323ZFSstPevfjh7AUejKfbHHpL_mqagbLtcLALSGT6-P8Fsc8zIcy0-R8p7VU4KhDUkeVL6"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
+<div class="absolute bottom-4 left-4 text-[10px] font-mono tracking-tighter text-accent-iridescent">ID: CORE_01_VOCAL</div>
+</div>
+<div class="aspect-[3/4] glass-panel rounded-xl overflow-hidden relative group translate-y-12">
+<img class="w-full h-full object-cover opacity-60 grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Interactive rotating 3D scanned head with pixel sorting effect" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3tdzd5X1B6lA25HW-uhBHGg5N6fI3zY9VJx7cSfdohs2outMixsobhODz__bp372bI6a64WFxdQQEABSOVrUwWiZC-m7O6OGc-3GELST6sXW6X7iCigNXwj82seP5RFidJyxsjMkima0_wjQoIuupZLDONBC6zTGcBEB-u2zOs1CKLJd5NFqDz4f1-PhM094ngXz5j1uQiWmKj4d1l3a_tSO7ZcE2Az8QAE1wv6eRxzO2SeWweYP6nSWLGfH9xnRDGzTipE8wom4S"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
+<div class="absolute bottom-4 left-4 text-[10px] font-mono tracking-tighter text-accent-iridescent">ID: CORE_02_STRINGS</div>
+</div>
+<div class="aspect-[3/4] glass-panel rounded-xl overflow-hidden relative group">
+<img class="w-full h-full object-cover opacity-60 grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Surrealist white 3D scan of a face with fluid textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAZcYrNRMY5RbLZ_cYZqxClQS1MC7xzyM90oRj1T4Q0EIUWZ1-9K0FEdP3iaQuzeie79tbmu1iF6PP17AXV4DaG8bqOwUkJ3SOtccz8_dS-hTlzbMZG-BKC-Iad-nU56jMgOvCCksui_SOA0sqK3yTNoVRt4uobmPBmhs7-aXdALhXT1fgOIR3H4G070XrW5qIdB3w4sw3BkwyrASzcEOjCRkGhG0y2Q-ahnWh0cQmd9f5nGsMYvZHMiq6l4HLsOxvUhRgrEEUZ3fU"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
+<div class="absolute bottom-4 left-4 text-[10px] font-mono tracking-tighter text-accent-iridescent">ID: CORE_03_PERCUSS</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Progress Indicator -->
+<div class="max-w-[960px] mx-auto px-4 mt-24">
+<div class="flex flex-col gap-3 p-4 glass-panel rounded-xl iridescent-glow">
+<div class="flex gap-6 justify-between">
+<p class="text-white text-xs font-bold tracking-[0.3em] uppercase">PORTAL_DEPTH_METRICS</p>
+<p class="text-primary text-xs font-mono">68.42%_DECODED</p>
+</div>
+<div class="rounded-full bg-white/5 h-1 relative overflow-hidden">
+<div class="absolute top-0 left-0 h-full rounded-full bg-primary" style="width: 68%;"></div>
+</div>
+<p class="text-accent-iridescent text-[10px] font-mono tracking-widest uppercase">IRIDESCENT_DECODING_IN_PROGRESS...</p>
+</div>
+</div>
+<!-- Manifesto Metadata Section -->
+<section class="max-w-[960px] mx-auto px-4 mt-20">
+<div class="grid md:grid-cols-2 gap-6">
+<!-- Action Panel 1 -->
+<div class="p-4 @container h-full">
+<div class="flex flex-col items-start justify-between h-full gap-8 rounded-xl border border-white/10 bg-white/5 p-8 hover:border-primary/50 transition-all">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">data_object</span>
+<p class="text-white text-sm font-bold tracking-widest uppercase">MANIFESTO_DATA.txt</p>
+</div>
+<p class="text-white/60 text-sm leading-relaxed font-light">
+                                Dystopian avant-garde narratives merging transdisciplinary soundscapes with silicon-based aesthetics. Auramotora explores the intersection of organic decay and synthetic precision.
+                            </p>
+</div>
+<a class="text-[10px] font-bold tracking-[0.2em] flex items-center gap-2 text-primary uppercase hover:text-white transition-colors" href="#">
+                            DECRYPT_FULL_TEXT
+                            <span class="material-symbols-outlined text-sm">arrow_right_alt</span>
+</a>
+</div>
+</div>
+<!-- Action Panel 2 -->
+<div class="p-4 @container h-full">
+<div class="flex flex-col items-start justify-between h-full gap-8 rounded-xl border border-white/10 bg-white/5 p-8 hover:border-primary/50 transition-all">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">terminal</span>
+<p class="text-white text-sm font-bold tracking-widest uppercase">TECHNICAL_SPECS.sh</p>
+</div>
+<p class="text-white/60 text-sm leading-relaxed font-light">
+                                Optimized for high-fidelity audio transmission. Required: 24-bit/96kHz output capability. Visual sensory bypass recommended for full atmospheric immersion.
+                            </p>
+</div>
+<a class="text-[10px] font-bold tracking-[0.2em] flex items-center gap-2 text-primary uppercase hover:text-white transition-colors" href="#">
+                            EXECUTE_PROTOCOL
+                            <span class="material-symbols-outlined text-sm">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- The DNA / Influence Cloud -->
+<section class="max-w-[960px] mx-auto px-4 mt-24 text-center">
+<h3 class="text-xs font-mono tracking-[0.5em] text-white/40 mb-12 uppercase">003_DNA: SONIC_INFLUENCES</h3>
+<div class="relative min-h-[400px] border border-white/5 rounded-3xl p-12 bg-white/[0.02] flex flex-wrap items-center justify-center gap-4">
+<!-- Draggable Tags Simulation -->
+<div class="px-6 py-3 rounded-full border border-primary/40 bg-primary/10 text-primary text-sm font-bold tracking-wider cursor-move hover:bg-primary hover:text-white transition-all">SHOEGAZE</div>
+<div class="px-6 py-3 rounded-full border border-white/10 bg-white/5 text-white/60 text-sm font-bold tracking-wider cursor-move hover:border-white transition-all">NU_METAL</div>
+<div class="px-6 py-3 rounded-full border border-white/10 bg-white/5 text-white/60 text-sm font-bold tracking-wider cursor-move hover:border-white transition-all">INDUSTRIAL</div>
+<div class="px-6 py-3 rounded-full border border-white/10 bg-white/5 text-white/60 text-sm font-bold tracking-wider cursor-move hover:border-white transition-all">AVANT_GARDE</div>
+<div class="px-6 py-3 rounded-full border border-white/10 bg-white/5 text-white/60 text-sm font-bold tracking-wider cursor-move hover:border-white transition-all">CYBER_PUNK</div>
+<div class="px-6 py-3 rounded-full border border-white/10 bg-white/5 text-white/60 text-sm font-bold tracking-wider cursor-move hover:border-white transition-all">TECHNO_NOISE</div>
+<div class="px-6 py-3 rounded-full border border-white/10 bg-white/5 text-white/60 text-sm font-bold tracking-wider cursor-move hover:border-white transition-all">GLITCH</div>
+<div class="px-6 py-3 rounded-full border border-primary/40 bg-primary/10 text-primary text-sm font-bold tracking-wider cursor-move hover:bg-primary hover:text-white transition-all">DREAM_POP</div>
+<div class="px-6 py-3 rounded-full border border-white/10 bg-white/5 text-white/60 text-sm font-bold tracking-wider cursor-move hover:border-white transition-all">SYNTH_WAVE</div>
+<div class="px-6 py-3 rounded-full border border-white/10 bg-white/5 text-white/60 text-sm font-bold tracking-wider cursor-move hover:border-white transition-all">AMBIENT_VOID</div>
+<!-- Floating Decorative HUD element -->
+<div class="absolute -bottom-4 -left-4 glass-panel p-4 rounded-xl border border-white/20 text-[10px] font-mono text-accent-iridescent text-left max-w-xs">
+<span class="text-white block mb-1">DATA_STREAM_LOG:</span>
+                    &gt; Initializing physics engine...<br/>
+                    &gt; Tracking interaction vectors...<br/>
+                    &gt; Force fields active at screen boundaries.
+                </div>
+</div>
+</section>
+<!-- Media Player Section -->
+<section class="max-w-[960px] mx-auto px-4 mt-24">
+<h3 class="text-xs font-mono tracking-[0.5em] text-white/40 mb-8 uppercase text-center">004_TRANSMISSION: AUDIO_OUTPUT</h3>
+<div class="p-1 bg-white/10 rounded-2xl">
+<div class="relative flex items-center justify-center bg-background-dark bg-cover bg-center aspect-video rounded-xl overflow-hidden group" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBAgPSveQJdYQ2TVlFyCi8EDVM06e6FRWz0ohmT5I3IuGKVEtzpU2Y7LKJu-qFFGnSabdqZk9MDqlph7jcB9hdsgsRjeVsO-TLMCijyTgvzgqPqOMHJSDjlsJKEUhwihjHa8TyHItBK2uLTVR4C2nlKomoXoUJhZDS0zdSybHOWcliosLzqlMwzRv0qszqUyvgzZnBQHThkGj8Y2qQ6bqU674Qno4MnifEjbZk-Mw-cMGQm7fQ9evUAu7t44d5cn8Pa74_mLXV_uc1M");'>
+<div class="absolute inset-0 bg-primary/30 mix-blend-multiply transition-opacity group-hover:opacity-40"></div>
+<div class="absolute inset-0 pixel-sort-overlay opacity-20"></div>
+<button class="z-10 flex items-center justify-center rounded-full size-24 bg-white/10 backdrop-blur-md text-white border border-white/20 hover:scale-110 hover:bg-primary transition-all">
+<span class="material-symbols-outlined text-4xl ml-1">play_arrow</span>
+</button>
+<div class="absolute bottom-6 left-6 right-6 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-[10px] font-bold tracking-widest text-primary uppercase">CURRENT_TRACK</span>
+<span class="text-xl font-bold uppercase tracking-tight">SILICON_DREAM_PULSE</span>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">shuffle</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">repeat</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Meta-Data -->
+<footer class="border-t border-white/10 py-12 px-8 bg-background-dark relative overflow-hidden">
+<div class="max-w-[1440px] mx-auto grid md:grid-cols-4 gap-12 relative z-10">
+<div class="col-span-2 space-y-6">
+<div class="flex items-center gap-3">
+<div class="size-5 text-primary">
+<span class="material-symbols-outlined text-2xl">deployed_code</span>
+</div>
+<h2 class="text-lg font-bold tracking-tighter uppercase">AURAMOTORA</h2>
+</div>
+<p class="text-white/40 text-xs font-light max-w-sm leading-relaxed tracking-wider">
+                    Transdisciplinary audiovisual collective focusing on the intersection of technological advancement and human obsolescence. Engineered for the 2026 sensory landscape.
+                </p>
+</div>
+<div class="space-y-4">
+<h4 class="text-[10px] font-bold tracking-[0.3em] uppercase text-primary">ACCESS_POINTS</h4>
+<ul class="text-xs space-y-2 text-white/60">
+<li><a class="hover:text-white transition-colors" href="#">INSTAGRAM_API</a></li>
+<li><a class="hover:text-white transition-colors" href="#">SPOTIFY_LINK</a></li>
+<li><a class="hover:text-white transition-colors" href="#">DISCORD_SERVER</a></li>
+<li><a class="hover:text-white transition-colors" href="#">TWITCH_CORE</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-[10px] font-bold tracking-[0.3em] uppercase text-primary">ENCRYPTED_MAIL</h4>
+<p class="text-xs text-white/60 leading-relaxed">
+                    mgmt@auramotora.tech<br/>
+                    press@auramotora.tech
+                </p>
+<div class="flex gap-4 mt-4">
+<span class="material-symbols-outlined text-white/40 hover:text-white cursor-pointer transition-colors">fingerprint</span>
+<span class="material-symbols-outlined text-white/40 hover:text-white cursor-pointer transition-colors">token</span>
+<span class="material-symbols-outlined text-white/40 hover:text-white cursor-pointer transition-colors">shield</span>
+</div>
+</div>
+</div>
+<!-- Background Grid Decoration -->
+<div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+</footer>
+</body></html>
